@@ -1,0 +1,761 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.418),rgba(157, 224, 255, 0.432)), url("./image/pic1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+html{
+    scroll-behavior: smooth;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+a:hover{
+    color: rgb(220, 241, 30)
+}
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn {
+    background-color: rgb(192, 43, 43);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover {
+    scale: 1.05;
+    color: #ffffff;
+}
+.action_btn:active {
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+    height: 350px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* HERO */
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* about style */
+section#about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#c9f2ff, #ffffff)
+}
+.about .box-about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+.about .box-about .box:nth-child(1) h1{
+    margin-top: 20px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-decoration: underline;
+}
+.about .box-about .box:nth-child(1) p{
+    font-size: 17px;
+    line-height: 2;
+    color: #000000;
+}
+.about .box-about .box:nth-child(1) img {
+    margin: auto;
+    float: right;
+    border-radius: 10px;
+}
+.about .box-about .box h2{
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.about .box-about .box ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    line-height: 1.5;
+    color: #000000;
+}
+.about .box-about .box ul li {
+    padding-left: 16px;
+    list-style-position: inside;
+    list-style-type: disc;
+}
+/* pengalaman style */
+section#pengalaman{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#2f239e, #6ba1d3)
+}
+.pengalaman .box-pengalaman {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pengalaman .box-pengalaman h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+.pengalaman .box-pengalaman img{
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.pengalaman .box-pengalaman .box ol{
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.pengalaman .box-pengalaman .box ol li {
+    list-style-type: decimal;
+    margin-left: 30px;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+/* psikoterapi */
+section#psikoterapi{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#c9f2ff, #ffffff);
+}
+.psikoterapi .box-psikoterapi{
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.psikoterapi .box-psikoterapi h1{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #000000
+}
+.psikoterapi .box-psikoterapi h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.psikoterapi .box-psikoterapi h3{
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.2;
+}
+.psikoterapi .box-psikoterapi p{
+    font-size: 15x;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.psikoterapi .box-psikoterapi img{
+    border-radius: 10px;
+    float: right;
+}
+.psikoterapi .box-psikoterapi .box ol {
+    font-size: 15px;
+}
+.psikoterapi .box-psikoterapi .box ol li{
+    font-size: 16px;
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+    margin-bottom: 5px;
+}
+/* assessment style */
+section#assessment{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#2f239e, #6ba1d3)
+}
+.assessment .box-assessment {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.assessment .box-assessment h1{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff
+}
+.assessment .box-assessment img{
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.assessment .box-assessment p {
+margin-top: 18px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+/* program layanan style*/
+section#program{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#c9f2ff, #ffffff);
+}
+.program .box-program{
+    display: flex;
+    flex-direction: row;
+}
+.program .box-program .box h1{
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.program .box-program .box h2{
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.program .box-program .box {
+    margin-inline: 33px;
+    color: #000000;
+}
+.program .box-program p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.program .box-program .box:nth-child(2) h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.program .box-program .box:nth-child(3) h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/*contact style*/
+section#contact{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact .container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#2f239e,#6ba1d3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 70%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+form h3{
+    color: rgb(94, 94, 94);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 14px;
+}
+form button{
+    padding: 15px;
+    background: #db2828;
+    color: #ffffff;
+    font-size: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+/* footer style */
+footer{
+    background: #206660;
+    padding-top: 50px;
+}
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+.footer-content p{
+    width: 100%;
+    margin-right: 20px;
+    padding: 7px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.footer-content i{
+    margin-right: 10px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i {
+    color: #ffffff;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f837ff;
+}
+.social-icons i:hover{
+    color: #f837ff;
+}
+.bottom-bar{
+    background:#c90a3a;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #ffffff;
+    margin: 0;
+    padding: 7px;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    #hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem
+    }
+    .about .box-about{
+        margin: 30px;
+    }
+    .about .box-about .box:nth-child(1) h1{
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    .about .box-about .box:nth-child(1) img {
+       width: 300px;
+       height: 200px;
+    }
+    .about .box-about .box:nth-child(1) p{
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box h2{
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box ul {
+        font-size: 15px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    .pengalaman .box-pengalaman {
+        margin: 30px;
+    }
+    .pengalaman .box-pengalaman h1 {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+    .pengalaman .box-pengalaman .box ol{
+        font-size: 14px;
+    }
+    .psikoterapi .box-psikoterapi h1{
+        font-size: 25px;
+    }
+    .psikoterapi .box-psikoterapi h2{
+        font-size: 18px;
+    }
+    .psikoterapi .box-psikoterapi h3{
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .psikoterapi .box-psikoterapi p{
+        font-size: 14px;
+    }
+    .psikoterapi .box-psikoterapi .box ol li{
+        font-size: 16px;
+    }
+    .program .box-program {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px){
+    .about .box-about .box:nth-child(1) h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box:nth-child(1) p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box h2{
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box ul {
+        font-size: 14px;
+    }
+    .about .box-about .box:nth-child(1) img {
+        width: 250px;
+        height: 180px;
+    }
+    .pengalaman .box-pengalaman h1 {
+        font-size: 20px;
+    }
+    .pengalaman .box-pengalaman img{
+        width: 300px;
+        height: 200px;
+    }
+    .pengalaman .box-pengalaman .box ol{
+        font-size: 12px;
+    }
+    .psikoterapi .box-psikoterapi h1{
+        font-size: 20px;
+    }
+    .psikoterapi .box-psikoterapi h2{
+        font-size: 16px;
+    }
+    .psikoterapi .box-psikoterapi h3{
+        font-size: 14px;
+    }
+    .psikoterapi .box-psikoterapi p{
+        font-size: 12px;
+    }
+    .psikoterapi .box-psikoterapi img{
+        width: 150px;
+        height: 150px;
+    }
+    .psikoterapi .box-psikoterapi .box ol li{
+        font-size: 13px;
+    }
+    .assessment .box-assessment h1{
+        font-size: 20px;
+    }
+    .assessment .box-assessment p {
+        font-size: 14px;
+    }
+    .program .box-program .box h1{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .program .box-program .box:nth-child(2) h1{
+        font-size: 18px;
+    }
+    .program .box-program .box:nth-child(2) p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .program .box-program .box:nth-child(3) h1{
+        font-size: 18px;
+    }
+    .program .box-program .box:nth-child(3) p{
+        font-size: 15px;
+    }
+    .contact{
+        height: 100%;
+        padding: 100px 0 100px 0;
+    }
+    .contact .box-contact .box{
+        flex-direction: column;
+    }
+    .contact .box-contact h1{
+        margin-bottom: 50px;
+    }
+    .footer-content p{
+        text-align:left;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .footer-content h3 {
+        text-align: left;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .social-icons{
+        text-align: left;
+        margin-left: 10px;
+    }
+    .bottom-bar p{
+        font-size: 14px;
+    }
+}
+
+
+@media(max-width: 576px) {
+    .dropdown_menu{
+    left: 2rem;
+    width: unset;
+    }
+    #hero h1 {
+        font-size: 24px;
+    }
+    .about .box-about{
+        margin: 30px;
+    }
+    .about .box-about .box:nth-child(1) h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box:nth-child(1) img{
+        width: 200px;
+        height: 150px;
+    }
+    .about .box-about .box:nth-child(1) p{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .about .box-about .box h2{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .about .box-about .box ul {
+        font-size: 13px;
+        margin-bottom: 7px;
+        line-height: 1.5;
+    }
+    .pengalaman .box-pengalaman {
+        margin: 30px;
+    }
+    .pengalaman .box-pengalaman h1 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    .pengalaman .box-pengalaman img{
+        width: 250px;
+        height: 180px;
+    }
+    .pengalaman .box-pengalaman .box ol{
+        font-size: 11px;
+    }
+    .pengalaman .box-pengalaman .box ol li {
+        line-height: 2;
+    }
+    .psikoterapi .box-psikoterapi h1{
+        font-size: 20px;
+    }
+    .psikoterapi .box-psikoterapi h2{
+        font-size: 15px;
+    }
+    .psikoterapi .box-psikoterapi h3{
+        font-size: 13px;
+    }
+    .psikoterapi .box-psikoterapi p{
+        font-size: 11px;
+    }
+    .psikoterapi .box-psikoterapi img{
+        width: 100px;
+        height: 100px;
+    }
+    .psikoterapi .box-psikoterapi .box ol li{
+        font-size: 12px;
+    }
+}
+@media(max-width: 480px) {
+    #hero h1{
+        font-size: 20px;
+    }
+    .about .box-about .box:nth-child(1) h1{
+        font-size: 17px;
+    }
+    .about .box-about .box:nth-child(1) p{
+        font-size: 12px;
+    }
+    .about .box-about .box:nth-child(1) img{
+        width: 150px;
+        height: 100px;
+    }
+    .about .box-about .box ul {
+        font-size: 11px;
+    }
+    .pengalaman .box-pengalaman h1{
+        font-size: 17px;
+    }
+    .pengalaman .box-pengalaman img{
+        width: 200px;
+        height: 130px;
+    }
+    .pengalaman .box-pengalaman .box ol{
+        font-size: 10px;
+    }
+    .psikoterapi .box-psikoterapi h1{
+        font-size: 17px;
+    }
+    .psikoterapi .box-psikoterapi h2{
+        font-size: 11px;
+    }
+    .psikoterapi .box-psikoterapi h3{
+        font-size: 10px;
+    }
+    .psikoterapi .box-psikoterapi p{
+        font-size: 9px;
+    }
+    .psikoterapi .box-psikoterapi img{
+        width: 100px;
+        height: 100px;
+    }
+    .psikoterapi .box-psikoterapi .box ol li{
+        font-size: 10px;
+    }
+    .assessment .box-assessment h1{
+        font-size: 17px;
+    }
+    .assessment .box-assessment p {
+        font-size: 13px;
+    }
+    .assessment .box-assessment img{
+        width: 150px;
+        height: 100px;
+    }
+    .program .box-program .box h1{
+        font-size: 17px;
+    }
+    .program .box-program .box h2{
+        font-size: 15px;
+    }
+    .program .box-program p{
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .footer-content p{
+        font-size: 10px;
+    }
+    .footer-content h3 {
+        font-size: 14px;
+    }
+    .bottom-bar p{
+        font-size: 10px;
+    }
+}
+
